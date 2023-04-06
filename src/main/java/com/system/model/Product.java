@@ -18,7 +18,7 @@ public class Product {
 
     private Integer productNo;
 
-    @Column(name="product_name")
+    @Column(name="productName")
     private String productName;
 
     private String productType;
