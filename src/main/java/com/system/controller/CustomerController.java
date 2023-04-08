@@ -31,7 +31,7 @@ public class CustomerController {
             Date date = new Date();
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String strDate= formatter.format(date);
-            customers.setPassword(bcryptEncoder.encode(customers.getPassword()));
+//            customers.setPassword(bcryptEncoder.encode(customers.getPassword()));
             customers.setCreatedAt(strDate);
             customerRepository.save(customers);
             return CommonResponse.generateResponse(null,1000,"Success");
@@ -67,18 +67,26 @@ public class CustomerController {
                     customers.getLastName());
         }
 
-        if (Objects.nonNull(customers.getContactNo())
-                && !"".equalsIgnoreCase(
-                String.valueOf(customers.getContactNo()))) {
-            customersDB.setContactNo(
-                    customers.getContactNo());
-        }
-
         if (Objects.nonNull(customers.getAddress())
                 && !"".equalsIgnoreCase(
                 customers.getAddress())) {
             customersDB.setAddress(
                     customers.getAddress());
+        }
+
+        if (Objects.nonNull(customers.getEmail())
+                && !"".equalsIgnoreCase(
+                customers.getEmail()) && !customersDB.getEmail().equals(customers.getEmail())) {
+            isEmailChanged = true;
+            customersDB.setEmail(
+                    customers.getEmail());
+        }
+
+        if (Objects.nonNull(customers.getContactNo())
+                && !"".equalsIgnoreCase(
+                String.valueOf(customers.getContactNo()))) {
+            customersDB.setContactNo(
+                    customers.getContactNo());
         }
 
         if (Objects.nonNull(customers.getDeliveryAddress())
@@ -87,20 +95,14 @@ public class CustomerController {
             customersDB.setDeliveryAddress(
                     customers.getDeliveryAddress());
         }
+//
+//        if (Objects.nonNull(customers.getPassword())
+//                && !"".equalsIgnoreCase(
+//                customers.getPassword())) {
+//            customersDB.setPassword(bcryptEncoder.encode(customers.getPassword()));
+//
+//        }
 
-        if (Objects.nonNull(customers.getPassword())
-                && !"".equalsIgnoreCase(
-                customers.getPassword())) {
-            customersDB.setPassword(bcryptEncoder.encode(customers.getPassword()));
-
-        }
-        if (Objects.nonNull(customers.getEmail())
-                && !"".equalsIgnoreCase(
-                customers.getEmail()) && !customersDB.getEmail().equals(customers.getEmail())) {
-            isEmailChanged = true;
-            customersDB.setEmail(
-                    customers.getEmail());
-        }
 
         if (isEmailChanged ){
             if (customersDB1 == null){
