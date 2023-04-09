@@ -14,24 +14,17 @@ public class Customers {
     private String firstName;
     @Column(name="last_name")
     private String lastName;
-    @Column(name="address")
-    private String address;
-    @Column(name="email")
     private String email;
-
-    @Column(name="contact_no")
-    private Integer contactNo;
+    private String password;
+    private String address;
     @Column(name="delivery_address")
     private String deliveryAddress;
-
+    @Column(name="contact_no")
+    private Integer contactNo;
     @Column(name="created_at")
     private String createdAt;
-
+    @Column(name="updated_at")
     private String updatedAt;
-
-    public Customers() {
-    }
-
 
     public Integer getId() {
         return id;
@@ -39,6 +32,47 @@ public class Customers {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     public String getFirstName() {
@@ -57,30 +91,6 @@ public class Customers {
         this.lastName = lastName;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Integer getContactNo() {
-        return contactNo;
-    }
-
-    public void setContactNo(Integer contactNo) {
-        this.contactNo = contactNo;
-    }
-
     public String getDeliveryAddress() {
         return deliveryAddress;
     }
@@ -89,19 +99,11 @@ public class Customers {
         this.deliveryAddress = deliveryAddress;
     }
 
-    public String getCreatedAt() {
-        return createdAt;
+    public Integer getContactNo() {
+        return contactNo;
     }
 
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setContactNo(Integer contactNo) {
+        this.contactNo = contactNo;
     }
 }
