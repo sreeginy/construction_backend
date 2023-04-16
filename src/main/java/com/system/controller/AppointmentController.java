@@ -97,7 +97,7 @@ public class AppointmentController {
 
     }
 
-    //Delete Product
+    //Delete appointment
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteAppointmentById(@PathVariable("id") Integer appointmentId){
         appointmentRepository.deleteById(appointmentId);

@@ -43,7 +43,7 @@ public class AccountController {
 
     }
 
-    //Update Product
+    //Update Account
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateAccount(@RequestBody Account account, @PathVariable("id") Integer accountId){
         Account accountDB = accountRepository.findById(accountId).get();

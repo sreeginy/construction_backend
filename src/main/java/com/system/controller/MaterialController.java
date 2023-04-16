@@ -17,7 +17,7 @@ public class MaterialController {
     @Autowired
     private MaterialRepository materialRepository;
 
-    //Add New Product
+    //Add New Material
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewMaterial(@RequestBody Material material){
         Material materialDB = materialRepository.findByName(material.getName());
@@ -34,14 +34,14 @@ public class MaterialController {
         }
     }
 
-    //List All Product
+    //List All Material
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllMaterial() {
         return CommonResponse.generateResponse(materialRepository.findAll(),1000,"Success");
 
     }
 
-    //Update Product
+    //Update Material
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateMaterial(@RequestBody Material Material,@PathVariable("id") Integer materialId){
         Material materialDB = materialRepository.findById(materialId).get();
@@ -72,7 +72,7 @@ public class MaterialController {
 
     }
 
-    //Delete Product
+    //Delete Material
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteMaterialById(@PathVariable("id") Integer materialId){
         materialRepository.deleteById(materialId);

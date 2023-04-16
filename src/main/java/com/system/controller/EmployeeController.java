@@ -20,7 +20,7 @@ public class EmployeeController {
     private EmployeeRepository employeeRepository;
 
 
-    //Add New Product
+    //Add New Employee
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewEmployee(@RequestBody Employee employee){
         Employee employeeDB = employeeRepository.findByEmployeeName(employee.getEmployeeName());
@@ -37,14 +37,14 @@ public class EmployeeController {
         }
     }
 
-    //List All Product
+    //List All Employee
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllEmployee() {
         return CommonResponse.generateResponse(employeeRepository.findAll(),1000,"Success");
 
     }
 
-    //Update Product
+    //Update Employee
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateEmployee(@RequestBody Employee employee, @PathVariable("id") Integer employeeId){
         Employee employeeDB = employeeRepository.findById(employeeId).get();
@@ -91,7 +91,7 @@ public class EmployeeController {
     }
 
 
-    //Delete Product
+    //Delete Employee
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteEmployeeById(@PathVariable("id") Integer employeeId){
         employeeRepository.deleteById(employeeId);
