@@ -19,7 +19,7 @@ public class ProjectController {
     private ProjectRepository projectRepository;
 
 
-    //Add New Product
+    //Add New Project
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewProject(@RequestBody Project project){
         Project projectDB = projectRepository.findByProjectName(project.getProjectName());
@@ -36,14 +36,14 @@ public class ProjectController {
         }
     }
 
-    //List All Product
+    //List All Project
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllProjects() {
         return CommonResponse.generateResponse(projectRepository.findAll(),1000,"Success");
 
     }
 
-    //Update Product
+    //Update Project
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateProject(@RequestBody Project project,@PathVariable("id") Integer projectId){
         Project projectDB = projectRepository.findById(projectId).get();
@@ -118,7 +118,7 @@ public class ProjectController {
 
     }
 
-    //Delete Product
+    //Delete Project
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteProjectById(@PathVariable("id") Integer projectId){
         projectRepository.deleteById(projectId);

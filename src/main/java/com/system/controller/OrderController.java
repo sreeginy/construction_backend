@@ -17,7 +17,7 @@ public class OrderController {
     @Autowired
     private OrderRepository orderRepository;
 
-    //Add Customer
+    //Add Orders
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse createOrder(@RequestBody Orders orders){
             Date date = new Date();
@@ -28,14 +28,14 @@ public class OrderController {
             return CommonResponse.generateResponse(null,1000,"Success");
     }
 
-    //List All customer
+    //List All Orders
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllOrders() {
         return CommonResponse.generateResponse(orderRepository.findAll(),1000,"Success");
 
     }
 
-    //Update customer
+    //Update Orders
     @PutMapping(path = "/update/{id}")
     public CommonResponse updateOrder(@RequestBody Orders orders,@PathVariable("id") Integer orderId){
         Orders ordersDB = orderRepository.findById(orderId).get();
@@ -52,7 +52,7 @@ public class OrderController {
         return CommonResponse.generateResponse(null,1000,"Updated Successfully");
     }
 
-    //Delete customer
+    //Delete Orders
     @DeleteMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteOrderById(@PathVariable("id") Integer orderId){
         orderRepository.deleteById(orderId);
