@@ -10,6 +10,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String productNo;
+    private String imageUrl; //Picture
     @Column(name="product_name")
     private String productName;
     private String productType;
