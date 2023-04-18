@@ -16,7 +16,7 @@ public class Material {
     @Column(name="material_package")
     private String packages ;
 
-    private Double cost;
+    private Double cost; //Rs
 
     @Column(name="created_at")
     private String createdAt;

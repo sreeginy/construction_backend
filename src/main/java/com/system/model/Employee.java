@@ -15,7 +15,7 @@ public class Employee {
 
     private String position;
 
-    private String bio;
+    private String bio; //personal Details
 
     private String email;
 
