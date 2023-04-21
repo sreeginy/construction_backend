@@ -13,7 +13,6 @@ public class Project {
     @Column(name="project_name")
     private String projectName;
 
-
     @Column(name = "packages")
     private String packages;
 
