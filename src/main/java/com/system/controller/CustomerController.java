@@ -4,12 +4,14 @@ import com.system.model.CommonResponse;
 import com.system.model.Customers;
 import com.system.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/customers")
@@ -113,6 +115,17 @@ public class CustomerController {
 
     }
 
+
+
+//    //Delete customer
+//    @GetMapping(path = "/delete/{id}")
+//    public @ResponseBody CommonResponse deleteCustomerById(@PathVariable("id") Integer customerId){
+//        customerRepository.deleteById(customerId);
+//
+//        return CommonResponse.generateResponse(null,1000,"Deleted Successfully!!!");
+//    }
+
+
     //Delete customer
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteCustomerById(@PathVariable("id") Integer customerId){
@@ -121,4 +134,5 @@ public class CustomerController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
 
     }
+
 }

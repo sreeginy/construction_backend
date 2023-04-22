@@ -26,6 +26,8 @@ public class Customers {
     @Column(name="updated_at")
     private String updatedAt;
 
+
+
     public Integer getId() {
         return id;
     }

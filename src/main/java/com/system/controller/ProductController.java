@@ -103,4 +103,9 @@ public class ProductController {
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
+
+    @GetMapping(path = "/count")
+    public @ResponseBody long getCount(){
+        return productRepository.count();
+    }
 }

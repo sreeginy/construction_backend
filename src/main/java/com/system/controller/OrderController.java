@@ -60,4 +60,8 @@ public class OrderController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
 
+    @GetMapping(path = "/count")
+    public @ResponseBody long getCount(){
+        return orderRepository.count();
+    }
 }
