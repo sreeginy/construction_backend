@@ -47,6 +47,7 @@ public class OrderController {
             ordersDB.setOrderStatus(
                     orders.getOrderStatus());
         }
+        
         orderRepository.save(ordersDB);
         //orderRepository.saveOrder(ordersDB);
         return CommonResponse.generateResponse(null,1000,"Updated Successfully");
