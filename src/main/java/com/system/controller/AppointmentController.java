@@ -17,8 +17,6 @@ public class AppointmentController {
     @Autowired
     private AppointmentRepository appointmentRepository;
 
-
-
     //Add New Appointment
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewAppointment(@RequestBody Appointment appointment){
@@ -91,7 +89,6 @@ public class AppointmentController {
                     appointment.getStatus());
         }
         return CommonResponse.generateResponse(appointmentRepository.save(appointmentDB),1000,"Success");
-
     }
 
     //Delete appointment
@@ -105,4 +102,5 @@ public class AppointmentController {
     public @ResponseBody long getCount(){
         return appointmentRepository.count();
     }
+
 }

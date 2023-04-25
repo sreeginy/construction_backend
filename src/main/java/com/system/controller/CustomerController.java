@@ -44,7 +44,6 @@ public class CustomerController {
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllCustomer() {
         return CommonResponse.generateResponse(customerRepository.findAll(),1000,"Success");
-
     }
 
     //Update customer
@@ -114,8 +113,6 @@ public class CustomerController {
         }
 
     }
-
-
 
 //    //Delete customer
 //    @GetMapping(path = "/delete/{id}")

@@ -83,10 +83,6 @@ public class UserController {
             return CommonResponse.generateResponse(null,1001,"User already exists");
         }
 
-
-
-
-
     }
 
     //List All users
@@ -116,7 +112,6 @@ public class UserController {
             userDB.setLastName(
                     user.getLastName());
         }
-
 
         if (Objects.nonNull(user.getEmail())
                 && !"".equalsIgnoreCase(
