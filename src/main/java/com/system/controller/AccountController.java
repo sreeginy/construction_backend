@@ -35,12 +35,10 @@ public class AccountController {
             return CommonResponse.generateResponse(null,1001,"Account already exists");
         }
     }
-
     //List All Account
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllAccounts() {
         return CommonResponse.generateResponse(accountRepository.findAll(),1000,"Success");
-
     }
 
     //Update Account
@@ -100,7 +98,6 @@ public class AccountController {
 
         return CommonResponse.generateResponse(accountRepository.save(accountDB),1000,"Success");
 
-
     }
 
     //Delete Account
@@ -109,7 +106,6 @@ public class AccountController {
         accountRepository.deleteById(accountId);
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
-
 
     }
 

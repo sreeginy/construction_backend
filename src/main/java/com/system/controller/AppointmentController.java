@@ -34,6 +34,7 @@ public class AppointmentController {
         }
     }
 
+
     //List All Appointment
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllAppointments() {
