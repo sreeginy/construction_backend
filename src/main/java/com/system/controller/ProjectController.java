@@ -18,7 +18,6 @@ public class ProjectController {
     @Autowired
     private ProjectRepository projectRepository;
 
-
     //Add New Project
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewProject(@RequestBody Project project){

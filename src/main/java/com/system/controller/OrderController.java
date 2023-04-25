@@ -53,7 +53,7 @@ public class OrderController {
         return CommonResponse.generateResponse(null,1000,"Updated Successfully");
     }
 
-    //Delete Orders
+    //Delete Order
     @DeleteMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteOrderById(@PathVariable("id") Integer orderId){
         orderRepository.deleteById(orderId);
