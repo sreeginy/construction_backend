@@ -81,7 +81,7 @@ public class RoleController {
         roleRepository.deleteById(roleDBId);
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
-        
+
     }
 
 }

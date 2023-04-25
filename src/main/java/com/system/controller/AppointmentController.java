@@ -90,10 +90,7 @@ public class AppointmentController {
             appointmentDB.setStatus(
                     appointment.getStatus());
         }
-
-
         return CommonResponse.generateResponse(appointmentRepository.save(appointmentDB),1000,"Success");
-
 
     }
 
