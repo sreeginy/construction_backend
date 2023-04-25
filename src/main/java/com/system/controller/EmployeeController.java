@@ -19,7 +19,6 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-
     //Add New Employee
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewEmployee(@RequestBody Employee employee){
@@ -87,12 +86,9 @@ public class EmployeeController {
 
         return CommonResponse.generateResponse(employeeRepository.save(employeeDB),1000,"Success");
 
-
     }
 
-
     //Delete Employee
-
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteEmployeeById(@PathVariable("id") Integer employeeId){
         employeeRepository.deleteById(employeeId);

@@ -111,7 +111,6 @@ public class ProjectController {
                     project.getStatus());
         }
 
-
         return CommonResponse.generateResponse(projectRepository.save(projectDB),1000,"Success");
 //        return CommonResponse.generateResponse(null,1000,"Updated Successfully");
 
