@@ -11,7 +11,6 @@ public class Partners {
     private String name;
     private Double cost;
     private Integer duration;
-
     @Column(name="created_at")
     private String createdAt;
     @Column(name="updated_at")

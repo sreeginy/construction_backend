@@ -9,12 +9,9 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
     @Column(name="access_Level")
     private String accessLevel;
-
     private String email;
-
     private String description;
 
     @Column(name="created_at")

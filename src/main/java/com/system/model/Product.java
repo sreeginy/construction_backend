@@ -24,7 +24,6 @@ public class Product {
     public Product(){
 
     }
-
     public String getCreatedAt() {
         return createdAt;
     }
