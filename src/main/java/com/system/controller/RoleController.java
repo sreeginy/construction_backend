@@ -64,7 +64,6 @@ public class RoleController {
                     role.getEmail());
         }
 
-
         if (Objects.nonNull(role.getDescription())
                 && !"".equalsIgnoreCase(
                 role.getDescription())) {
@@ -82,6 +81,7 @@ public class RoleController {
         roleRepository.deleteById(roleDBId);
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
+        
     }
 
 }

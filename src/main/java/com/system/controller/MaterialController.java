@@ -67,7 +67,6 @@ public class MaterialController {
                     Material.getCost());
         }
 
-
         return CommonResponse.generateResponse(materialRepository.save(materialDB),1000,"Success");
 
     }
