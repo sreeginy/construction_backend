@@ -15,6 +15,7 @@ import java.util.Objects;
 @RequestMapping(path = "/project")
 public class ProjectController {
 
+
     @Autowired
     private ProjectRepository projectRepository;
 
@@ -35,12 +36,14 @@ public class ProjectController {
         }
     }
 
+
     //List All Project
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllProjects() {
         return CommonResponse.generateResponse(projectRepository.findAll(),1000,"Success");
 
     }
+
 
     //Update Project
     @PostMapping(path = "/update/{id}")
@@ -115,6 +118,7 @@ public class ProjectController {
 //        return CommonResponse.generateResponse(null,1000,"Updated Successfully");
 
     }
+    
 
     //Delete Project
     @GetMapping(path = "/delete/{id}")
@@ -127,4 +131,5 @@ public class ProjectController {
     public @ResponseBody long getCount(){
         return projectRepository.count();
     }
+    
 }

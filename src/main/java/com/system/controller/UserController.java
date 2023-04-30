@@ -133,6 +133,7 @@ public class UserController {
 
     }
 
+
     //Delete User
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteUserById(@PathVariable("id") Integer userId){
@@ -150,4 +151,5 @@ public class UserController {
             throw new Exception("INVALID_CREDENTIALS", e);
         }
     }
+
 }
