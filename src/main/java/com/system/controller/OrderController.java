@@ -5,7 +5,6 @@ import com.system.model.Orders;
 import com.system.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
@@ -65,5 +64,6 @@ public class OrderController {
     public @ResponseBody long getCount(){
         return orderRepository.count();
     }
+    
 }
 
