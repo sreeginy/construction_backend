@@ -26,8 +26,6 @@ public class Customers {
     @Column(name="updated_at")
     private String updatedAt;
 
-
-
     public Integer getId() {
         return id;
     }
@@ -108,4 +106,5 @@ public class Customers {
     public void setContactNo(Integer contactNo) {
         this.contactNo = contactNo;
     }
+    
 }
