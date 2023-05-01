@@ -75,7 +75,6 @@ public class RoleController {
 
     }
 
-
     //Delete Role
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteRoleById(@PathVariable("id") Integer roleDBId){

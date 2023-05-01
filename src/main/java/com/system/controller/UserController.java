@@ -82,7 +82,6 @@ public class UserController {
         }else {
             return CommonResponse.generateResponse(null,1001,"User already exists");
         }
-
     }
 
     //List All users
