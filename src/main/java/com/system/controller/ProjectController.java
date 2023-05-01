@@ -118,7 +118,6 @@ public class ProjectController {
 //        return CommonResponse.generateResponse(null,1000,"Updated Successfully");
 
     }
-    
 
     //Delete Project
     @GetMapping(path = "/delete/{id}")
@@ -127,6 +126,8 @@ public class ProjectController {
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
+
+    //countable
     @GetMapping(path = "/count")
     public @ResponseBody long getCount(){
         return projectRepository.count();

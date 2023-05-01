@@ -45,7 +45,7 @@ public class CustomerController {
     public @ResponseBody CommonResponse getAllCustomer() {
         return CommonResponse.generateResponse(customerRepository.findAll(),1000,"Success");
     }
-    
+
 
     //Update customer
     @PostMapping(path = "/update/{id}")
