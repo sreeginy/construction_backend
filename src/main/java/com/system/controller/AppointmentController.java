@@ -34,7 +34,6 @@ public class AppointmentController {
         }
     }
 
-
     //List All Appointment
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllAppointments() {
@@ -103,5 +102,6 @@ public class AppointmentController {
     public @ResponseBody long getCount(){
         return appointmentRepository.count();
     }
+
 
 }
