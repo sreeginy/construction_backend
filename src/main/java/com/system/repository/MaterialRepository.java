@@ -14,4 +14,5 @@ import java.util.Objects;
 public interface MaterialRepository extends JpaRepository<Material,Integer> {
     Material findByName(String name);
 
+
 }
