@@ -30,7 +30,7 @@ public class AccountController {
             String strDate= formatter.format(date);
             account.setCreatedAt(strDate);
             accountRepository.save(account);
-            return CommonResponse.generateResponse(null,1000,"Success");
+            return CommonResponse.generateResponse(null,1000,"Success!!");
         }else {
             return CommonResponse.generateResponse(null,1001,"Account already exists");
         }

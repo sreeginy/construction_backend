@@ -63,7 +63,7 @@ public class UserController {
             CommonResponse objreturn = CommonResponse.generateResponse(response,1000,"Login Success");
             return objreturn;
         }else {
-            return CommonResponse.generateResponse(response,1001,"Invalid Email / Password");
+            return CommonResponse.generateResponse(response,1001,"Invalid Email / Invalid Password");
         }
     }
 
@@ -78,7 +78,7 @@ public class UserController {
             user.setPassword(bcryptEncoder.encode(user.getPassword()));
             user.setCreatedAt(strDate);
             userRepository.save(user);
-            return CommonResponse.generateResponse(null,1000,"Success");
+            return CommonResponse.generateResponse(null,1000,"Success!!!");
         }else {
             return CommonResponse.generateResponse(null,1001,"User already exists");
         }
@@ -89,7 +89,7 @@ public class UserController {
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllUsers() {
         logger.info("Called");
-        return CommonResponse.generateResponse(userRepository.findAll(),1000,"Success");
+        return CommonResponse.generateResponse(userRepository.findAll(),1000,"Success!!");
     }
 
     //Update User

@@ -130,7 +130,7 @@ public class CustomerController {
     public @ResponseBody CommonResponse deleteCustomerById(@PathVariable("id") Integer customerId){
         customerRepository.deleteById(customerId);
 
-        return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
+        return CommonResponse.generateResponse(null,1000,"Deleted Successfully!!!");
 
     }
 
