@@ -49,7 +49,8 @@ public class OrderController {
 
         orderRepository.save(ordersDB);
         //orderRepository.saveOrder(ordersDB);
-        return CommonResponse.generateResponse(null,1000,"Updated Successfully");
+        return CommonResponse.generateResponse(null,1000,"Order Updated Successfully");
+
     }
 
     //Delete Order
