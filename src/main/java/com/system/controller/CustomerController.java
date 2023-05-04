@@ -124,7 +124,6 @@ public class CustomerController {
 //        return CommonResponse.generateResponse(null,1000,"Deleted Successfully!!!");
 //    }
 
-
     //Delete customer
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteCustomerById(@PathVariable("id") Integer customerId){
