@@ -20,6 +20,7 @@ public class EmployeeController {
     private EmployeeRepository employeeRepository;
 
     //Add New Employee
+
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewEmployee(@RequestBody Employee employee){
         Employee employeeDB = employeeRepository.findByEmployeeName(employee.getEmployeeName());
@@ -89,11 +90,13 @@ public class EmployeeController {
     }
 
     //Delete Employee
+
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteEmployeeById(@PathVariable("id") Integer employeeId){
         employeeRepository.deleteById(employeeId);
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
+
 
 }

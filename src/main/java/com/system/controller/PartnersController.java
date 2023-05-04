@@ -18,6 +18,7 @@ public class PartnersController {
     private PartnerRepository partnerRepository;
 
     //Add New Partners
+    
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewPartners(@RequestBody Partners partners){
         Partners partnerDB = partnerRepository.findByName(partners.getName());
