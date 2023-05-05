@@ -105,6 +105,4 @@ public class AppointmentController {
     public @ResponseBody long getCount(){
         return appointmentRepository.count();
     }
-
-
 }
