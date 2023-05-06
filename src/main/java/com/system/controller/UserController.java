@@ -67,7 +67,7 @@ public class UserController {
         }
     }
 
-    
+
     //Add New User
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewUser(@RequestBody User user){
