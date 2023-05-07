@@ -66,8 +66,7 @@ public class UserController {
             return CommonResponse.generateResponse(response,1001,"Invalid Email / Invalid Password");
         }
     }
-
-
+    
     //Add New User
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewUser(@RequestBody User user){
