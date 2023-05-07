@@ -98,7 +98,7 @@ public class AccountController {
 
         return CommonResponse.generateResponse(accountRepository.save(accountDB),1000,"Success");
 
-        
+
     }
 
     //Delete Account
