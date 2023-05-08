@@ -131,8 +131,6 @@ public class UserController {
         }
 
     }
-
-
     //Delete User
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteUserById(@PathVariable("id") Integer userId){
