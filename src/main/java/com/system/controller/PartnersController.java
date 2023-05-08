@@ -17,6 +17,7 @@ public class PartnersController {
     @Autowired
     private PartnerRepository partnerRepository;
 
+
     //Add New Partners
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewPartners(@RequestBody Partners partners){
@@ -50,6 +51,7 @@ public class PartnersController {
             partnersDB.setName(
                     partners.getName());
         }
+
 
         if (Objects.nonNull(partners.getCost())
                 && !"".equalsIgnoreCase(

@@ -119,7 +119,6 @@ public class ProjectController {
 
     }
 
-
     //Delete Project
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteProjectById(@PathVariable("id") Integer projectId){
