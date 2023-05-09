@@ -72,7 +72,6 @@ public class RoleController {
         }
 
         return CommonResponse.generateResponse(roleRepository.save(roleDB),1000,"Success!!!");
-
     }
 
 
