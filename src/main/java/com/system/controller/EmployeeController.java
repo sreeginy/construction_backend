@@ -20,7 +20,6 @@ public class EmployeeController {
     private EmployeeRepository employeeRepository;
 
     //Add New Employee
-
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewEmployee(@RequestBody Employee employee){
         Employee employeeDB = employeeRepository.findByEmployeeName(employee.getEmployeeName());
@@ -43,7 +42,6 @@ public class EmployeeController {
         return CommonResponse.generateResponse(employeeRepository.findAll(),1000,"Success");
 
     }
-
     //Update Employee
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateEmployee(@RequestBody Employee employee, @PathVariable("id") Integer employeeId){
@@ -97,6 +95,4 @@ public class EmployeeController {
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
-
-
 }

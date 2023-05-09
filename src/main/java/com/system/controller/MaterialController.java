@@ -38,7 +38,6 @@ public class MaterialController {
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllMaterial() {
         return CommonResponse.generateResponse(materialRepository.findAll(),1000,"Success");
-
     }
 
     //Update Material
