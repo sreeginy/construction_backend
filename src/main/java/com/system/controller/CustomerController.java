@@ -45,8 +45,6 @@ public class CustomerController {
     public @ResponseBody CommonResponse getAllCustomer() {
         return CommonResponse.generateResponse(customerRepository.findAll(),1000,"Success");
     }
-
-
     //Update customer
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateCustomer(@RequestBody Customers customers,@PathVariable("id") Integer customerId){
@@ -101,8 +99,6 @@ public class CustomerController {
             customersDB.setEmail(
                     customers.getEmail());
         }
-
-
         if (isEmailChanged ){
             if (customersDB1 == null){
                 return CommonResponse.generateResponse(customerRepository.save(customersDB),1000,"Success");
