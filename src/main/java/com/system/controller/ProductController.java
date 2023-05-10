@@ -103,6 +103,7 @@ public class ProductController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
 
+    //countable for Product module
     @GetMapping(path = "/count")
     public @ResponseBody long getCount(){
         return productRepository.count();

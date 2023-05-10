@@ -126,7 +126,8 @@ public class ProjectController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
 
-    //countable
+
+    //countable of Project module
     @GetMapping(path = "/count")
     public @ResponseBody long getCount(){
         return projectRepository.count();
