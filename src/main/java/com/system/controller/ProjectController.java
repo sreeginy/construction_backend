@@ -43,7 +43,7 @@ public class ProjectController {
         return CommonResponse.generateResponse(projectRepository.findAll(),1000,"Success");
 
     }
-    
+
     //Update Project
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateProject(@RequestBody Project project,@PathVariable("id") Integer projectId){
