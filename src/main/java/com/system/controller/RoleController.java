@@ -48,8 +48,6 @@ public class RoleController {
     public CommonResponse updateRole(@RequestBody Role role, @PathVariable("id") Integer roleDBId){
         Role roleDB = roleRepository.findById(roleDBId).get();
 
-
-
         if (Objects.nonNull(role.getAccessLevel())
                 && !"".equalsIgnoreCase(
                 role.getAccessLevel())) {
@@ -74,8 +72,6 @@ public class RoleController {
         return CommonResponse.generateResponse(roleRepository.save(roleDB),1000,"Success!!!");
     }
 
-
-
     //Delete Role
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteRoleById(@PathVariable("id") Integer roleDBId){
@@ -84,6 +80,4 @@ public class RoleController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
 
     }
-    
-
 }
