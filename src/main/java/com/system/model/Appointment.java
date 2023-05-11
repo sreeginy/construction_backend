@@ -17,7 +17,6 @@ public class Appointment {
     private String email;
     private String joinDate;
     private String packages;
-
     private String status;
     @Column(name="created_at")
     private String createdAt;
