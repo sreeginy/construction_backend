@@ -52,7 +52,6 @@ public class PartnersController {
                     partners.getName());
         }
 
-
         if (Objects.nonNull(partners.getCost())
                 && !"".equalsIgnoreCase(
                 partners.getCost().toString())) {
