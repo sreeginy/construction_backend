@@ -74,7 +74,6 @@ public class PartnersController {
         partnerRepository.deleteById(partnerId);
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
-
     }
 
 }

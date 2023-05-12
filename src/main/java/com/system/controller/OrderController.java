@@ -67,6 +67,5 @@ public class OrderController {
     public @ResponseBody long getCount(){
         return orderRepository.count();
     }
-    
 }
 
