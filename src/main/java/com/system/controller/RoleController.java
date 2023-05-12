@@ -42,8 +42,7 @@ public class RoleController {
         return CommonResponse.generateResponse(roleRepository.findAll(),1000,"Success");
 
     }
-
-
+    
     //Update Role
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateRole(@RequestBody Role role, @PathVariable("id") Integer roleDBId){
