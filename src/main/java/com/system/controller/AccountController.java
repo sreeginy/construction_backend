@@ -107,4 +107,5 @@ public class AccountController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
 
     }
+
 }

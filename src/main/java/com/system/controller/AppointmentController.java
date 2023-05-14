@@ -61,7 +61,6 @@ public class AppointmentController {
                     appointment.getLastName());
         }
 
-
         if (Objects.nonNull(appointment.getEmail())
                 && !"".equalsIgnoreCase(
                 appointment.getEmail())) {
@@ -91,6 +90,7 @@ public class AppointmentController {
         }
         return CommonResponse.generateResponse(appointmentRepository.save(appointmentDB),1000,"Success");
     }
+
     //Delete appointment
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteAppointmentById(@PathVariable("id") Integer appointmentId){
@@ -98,6 +98,7 @@ public class AppointmentController {
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
+
     //Countable
     @GetMapping(path = "/count")
     public @ResponseBody long getCount(){

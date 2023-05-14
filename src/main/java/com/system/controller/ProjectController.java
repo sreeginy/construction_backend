@@ -15,7 +15,6 @@ import java.util.Objects;
 @RequestMapping(path = "/project")
 public class ProjectController {
 
-
     @Autowired
     private ProjectRepository projectRepository;
 
@@ -125,7 +124,7 @@ public class ProjectController {
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
-    
+
     //countable of Project module
     @GetMapping(path = "/count")
     public @ResponseBody long getCount(){
