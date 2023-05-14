@@ -69,7 +69,6 @@ public class MaterialController {
 
     }
 
-
     //Delete Material
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteMaterialById(@PathVariable("id") Integer materialId){

@@ -139,6 +139,7 @@ public class UserController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
 
+    
     private void authenticate(String username, String password) throws Exception {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
