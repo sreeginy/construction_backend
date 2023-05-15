@@ -62,6 +62,7 @@ public class OrderController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
 
+
     //countable for order module
     @GetMapping(path = "/count")
     public @ResponseBody long getCount(){
