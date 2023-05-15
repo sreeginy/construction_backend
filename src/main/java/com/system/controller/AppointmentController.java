@@ -41,7 +41,6 @@ public class AppointmentController {
 
     }
 
-
     //Update Appointment
     @PostMapping(path = "/update/{id}")
     public CommonResponse updateAppointment(@RequestBody Appointment appointment, @PathVariable("id") Integer appointmentId){
@@ -98,6 +97,7 @@ public class AppointmentController {
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
+
 
     //Countable
     @GetMapping(path = "/count")
