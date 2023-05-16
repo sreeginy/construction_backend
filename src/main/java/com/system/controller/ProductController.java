@@ -21,7 +21,6 @@ public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
-
     //Add New Product
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewProduct(@RequestBody Product product){
@@ -103,6 +102,7 @@ public class ProductController {
 
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
+
 
     //countable for Product module
     @GetMapping(path = "/count")
