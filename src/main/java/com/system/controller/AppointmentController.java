@@ -98,7 +98,6 @@ public class AppointmentController {
         return CommonResponse.generateResponse(null,1000,"Deleted Successfully");
     }
 
-
     //Countable
     @GetMapping(path = "/count")
     public @ResponseBody long getCount(){

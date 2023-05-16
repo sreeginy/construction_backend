@@ -98,7 +98,7 @@ public class AccountController {
 
         return CommonResponse.generateResponse(accountRepository.save(accountDB),1000,"Success");
     }
-    
+
     //Delete Account
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteAccountById(@PathVariable("id") Integer accountId){
