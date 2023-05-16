@@ -21,7 +21,7 @@ public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
-    
+
     //Add New Product
     @PostMapping(path = "/add")
     public @ResponseBody CommonResponse addNewProduct(@RequestBody Product product){
