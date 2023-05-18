@@ -90,6 +90,7 @@ public class AppointmentController {
         return CommonResponse.generateResponse(appointmentRepository.save(appointmentDB),1000,"Success");
     }
 
+    
     //Delete appointment
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteAppointmentById(@PathVariable("id") Integer appointmentId){

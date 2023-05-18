@@ -112,6 +112,8 @@ public class CustomerController {
 
     }
 
+
+
 //    //Delete customer
 //    @GetMapping(path = "/delete/{id}")
 //    public @ResponseBody CommonResponse deleteCustomerById(@PathVariable("id") Integer customerId){
