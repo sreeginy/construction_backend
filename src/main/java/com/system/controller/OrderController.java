@@ -54,7 +54,6 @@ public class OrderController {
 
     }
 
-
     //Delete Order
     @DeleteMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deleteOrderById(@PathVariable("id") Integer orderId){
