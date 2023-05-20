@@ -16,6 +16,7 @@ import java.util.Objects;
 @RequestMapping(path = "/account")
 public class AccountController {
 
+
     @Autowired
     private AccountRepository accountRepository;
 
@@ -98,6 +99,7 @@ public class AccountController {
 
         return CommonResponse.generateResponse(accountRepository.save(accountDB),1000,"Success");
     }
+
 
     //Delete Account
     @GetMapping(path = "/delete/{id}")
