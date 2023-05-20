@@ -91,6 +91,7 @@ public class ProductController {
             productDB.setProductStatus(
                     product.getProductStatus());
         }
+        
 
         return CommonResponse.generateResponse(productRepository.save(productDB),1000,"Success");
     }
