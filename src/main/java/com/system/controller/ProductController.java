@@ -92,7 +92,6 @@ public class ProductController {
                     product.getProductStatus());
         }
 
-
         return CommonResponse.generateResponse(productRepository.save(productDB),1000,"Success");
     }
 
@@ -110,5 +109,6 @@ public class ProductController {
     public @ResponseBody long getCount(){
         return productRepository.count();
     }
+
 
 }
