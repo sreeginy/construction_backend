@@ -35,7 +35,6 @@ public class ProjectController {
         }
     }
 
-
     //List All Project
     @GetMapping(path = "/all")
     public @ResponseBody CommonResponse getAllProjects() {

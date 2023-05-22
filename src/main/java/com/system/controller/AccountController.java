@@ -16,7 +16,6 @@ import java.util.Objects;
 @RequestMapping(path = "/account")
 public class AccountController {
 
-
     @Autowired
     private AccountRepository accountRepository;
 
