@@ -69,6 +69,7 @@ public class PartnersController {
     }
 
 
+
     //Delete Partners
     @GetMapping(path = "/delete/{id}")
     public @ResponseBody CommonResponse deletePartnersById(@PathVariable("id") Integer partnerId){
