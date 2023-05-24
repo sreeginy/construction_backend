@@ -67,7 +67,6 @@ public class PartnersController {
 
         return CommonResponse.generateResponse(partnerRepository.save(partnersDB),1000,"Success");
     }
-
     
     
     //Delete Partners
